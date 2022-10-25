@@ -1,0 +1,97 @@
+
+{
+  "data": {
+    "favoriteBooks": [
+      {
+        "id": "1",
+        "name": "Clean Code: A Handbook of Agile Software Craftsmanship",
+        "author": {
+          "id": "1",
+          "name": "Robert Cecil Martin"
+        },
+        "cover": "https://sscdn.co/gcs/studiosol/2022/mobile/book/clean-code.jpg",
+        "description": "Even bad code can function. But if code isn’t clean, it can bring a development organization to its knees. Every year, countless hours and significant resources are lost because of poorly written code. But it doesn’t have to be that way.\n\nNoted software expert Robert C. Martin presents a revolutionary paradigm with Clean Code: A Handbook of Agile Software Craftsmanship. Martin has teamed up with his colleagues from Object Mentor to distill their best agile practice of cleaning code “on the fly” into a book that will instill within you the values of a software craftsman and make you a better programmer–but only if you work at it.\n\nWhat kind of work will you be doing? You’ll be reading code–lots of code. And you will be challenged to think about what’s right about that code, and what’s wrong with it. More importantly, you will be challenged to reassess your professional values and your commitment to your craft.\n\nClean Code is divided into three parts. The first describes the principles, patterns, and practices of writing clean code. The second part consists of several case studies of increasing complexity. Each case study is an exercise in cleaning up code–of transforming a code base that has some problems into one that is sound and efficient. The third part is the payoff: a single chapter containing a list of heuristics and “smells” gathered while creating the case studies. The result is a knowledge base that describes the way we think when we write, read, and clean code.\n\nReaders will come away from this book understanding\nHow to tell the difference between good and bad code\nHow to write good code and how to transform bad code into good code\nHow to create good names, good functions, good objects, and good classes\nHow to format code for maximum readability\nHow to implement complete error handling without obscuring code logic\nHow to unit test and practice test-driven development\nThis book is a must for any developer, software engineer, project manager, team lead, or systems analyst with an interest in producing better code."
+      },
+      {
+        "id": "3",
+        "name": "The Clean Coder: A Code of Conduct for Professional Programmers",
+        "author": {
+          "id": "1",
+          "name": "Robert Cecil Martin"
+        },
+        "cover": "https://sscdn.co/gcs/studiosol/2022/mobile/book/the-clean-coder.jpg",
+        "description": "Programmers who endure and succeed amidst swirling uncertainty and nonstop pressure share a common attribute: They care deeply about the practice of creating software. They treat it as a craft. They are professionals.\n\nIn The Clean Coder: A Code of Conduct for Professional Programmers, legendary software expert Robert C. Martin introduces the disciplines, techniques, tools, and practices of true software craftsmanship. This book is packed with practical advice–about everything from estimating and coding to refactoring and testing. It covers much more than technique: It is about attitude. Martin shows how to approach software development with honor, self-respect, and pride; work well and work clean; communicate and estimate faithfully; face difficult decisions with clarity and honesty; and understand that deep knowledge comes with a responsibility to act.\n\nReaders will learn\n\nWhat it means to behave as a true software craftsman\nHow to deal with conflict, tight schedules, and unreasonable managers\nHow to get into the flow of coding, and get past writer’s block\nHow to handle unrelenting pressure and avoid burnout\nHow to combine enduring attitudes with new development paradigms\nHow to manage your time, and avoid blind alleys, marshes, bogs, and swamps\nHow to foster environments where programmers and teams can thrive\nWhen to say “No”–and how to say it\nWhen to say “Yes”–and what yes really means\n\nGreat software is something to marvel at: powerful, elegant, functional, a pleasure to work with as both a developer and as a user. Great software isn’t written by machines. It is written by professionals with an unshakable commitment to craftsmanship. The Clean Coder will help you become one of them–and earn the pride and fulfillment that they alone possess."
+      },
+      {
+        "id": "5",
+        "name": "Lonely Planet Chile & Easter Island",
+        "author": {
+          "id": "2",
+          "name": "Carolyn McCarthy"
+        },
+        "cover": "https://sscdn.co/gcs/studiosol/2022/mobile/book/lonely-planet-chile-e-easter-island.jpg",
+        "description": "Lonely Planet: The world's leading travel guide publisher\n\nLonely Planet's Chile & Easter Island is your passport to the most relevant, up-to-date advice on what to see and skip, and what hidden discoveries await you. Strap on your pack and hike through winding forests to behold the granite mountain spires of Las Torres; watch sunset turn the Valle de la Luna intense purple, gold, pink and yellow; and puzzle over the giant statues of Easter Island. All with your trusted travel companion. Get to the heart of Chile & Easter Island and begin your journey now!\n\nInside Lonely Planet's Chile & Easter Island:\n\nColour maps and images throughout\nHighlights and itineraries help you tailor your trip to your personal needs and interests\nInsider tips to save time and money and get around like a local, avoiding crowds and trouble spots\nEssential info at your fingertips - hours of operation, phone numbers, websites, transit tips, prices\nHonest reviews for all budgets - eating, sleeping, sightseeing, going out, shopping, hidden gems that most guidebooks miss\nCultural insights provide a richer, more rewarding travel experience - covering history, people, music, landscapes, wildlife, cuisine, politics\nOver 97 maps for easy navigation\nCovers Santiago, Middle Chile, Southern Heartland, Archipielago Juan Fernandez, Norte Grande, Norte Chico, Sur Chico, Chiloé, Northern Patagonia, Southern Patagonia, Tierra del Fuego, Easter Island\nThe Perfect Choice: Lonely Planet's Chile & Easter Island is our most comprehensive guide to Chile and Easter Island, and is designed to immerse you in the culture and help you discover the best sights and get off the beaten track.\n\nAbout Lonely Planet: Lonely Planet is a leading travel media company and the world's number one travel guidebook brand, providing both inspiring and trustworthy information for every kind of traveller since 1973. Over the past four decades, we've printed over 145 million guidebooks and grown a dedicated, passionate global community of travellers. You'll also find our content online, and in mobile apps, video, 14 languages, nine international magazines, armchair and lifestyle books, ebooks, and more.\n\n'Lonely Planet guides are, quite simply, like no other.' - New York Times\n\n'Lonely Planet. It's on everyone's bookshelves, it's in every traveller's hands. It's on mobile phones. It's on the Internet. It's everywhere, and it's telling entire generations of people how to travel the world.' - Fairfax Media (Australia)"
+      },
+      {
+        "id": "7",
+        "name": "Lonely Planet Southwest USA",
+        "author": {
+          "id": "2",
+          "name": "Carolyn McCarthy"
+        },
+        "cover": "https://sscdn.co/gcs/studiosol/2022/mobile/book/lonely-planet-southwest-usa.jpg",
+        "description": "Lonely Planet: The world's leading travel guide publisher\n\nLonely Planet Southwest USAis your passport to the most relevant, up-to-date advice on what to see and skip, and what hidden discoveries await you. Nourish your soul as you soak up the sheer immensity of the Grand Canyon, chase the neon lights in Las Vegas, or be lured by the ski slopes, hiking trails and white-water rapids of Taos -all with your trusted travel companion. Get to the heart of Southwest USA and begin your journey now!\n\nInside Lonely Planet's Southwest USA Travel Guide:\n\nColour maps and images throughout\nHighlights and itineraries help you tailor your trip to your personal needs and interests\nInsider tips to save time and money and get around like a local, avoiding crowds and trouble spots\nEssential info at your fingertips - hours of operation, phone numbers, websites, transit tips, prices\nHonest reviews for all budgets - eating, sleeping, sight-seeing, going out, shopping, hidden gems that most guidebooks miss\nCultural insights give you a richer, more rewarding travel experience - history, politics, lifestyle, Native Americans, culture, art, literature, cinema, music, architecture, landscapes, wildlife, environmental issues, cuisine, beer, wine, customs, etiquette\nCovers Las Vegas, Nevada, Arizona, Greater Phoenix, Grand Canyon Region, Navajo Reservation, Taos, Las Vegas, New Mexico, Albuquerque, Santa Fe, Southwestern Colorado, Utah and more\nThe Perfect Choice: Lonely Planet Southwest USA , our most comprehensive guide to Southwest USA, is perfect for both exploring top sights and taking roads less traveled.\n\nLooking for a guide focused on Las Vegas? Check out Lonely Planet's California guide for a comprehensive look at all the city has to offer; Discover Las Vegas, a photo-rich guide to the city's most popular attractions; or Pocket Las Vegas, a handy-sized guide focused on the can't-miss sights for a quick trip.\n\nAbout Lonely Planet: Since 1973, Lonely Planet has become the world's leading travel media company with guidebooks to every destination, an award-winning website, mobile and digital travel products, and a dedicated traveler community. Lonely Planet covers must-see spots but also enables curious travelers to get off beaten paths to understand more of the culture of the places in which they find themselves.\n\n"
+      },
+      {
+        "id": "10",
+        "name": "It: A Novel",
+        "author": {
+          "id": "3",
+          "name": "Stephen King"
+        },
+        "cover": "https://sscdn.co/gcs/studiosol/2022/mobile/book/it-a-novel.jpg",
+        "description": "It: Chapter Two—now a major motion picture!\n\nStephen King’s terrifying, classic #1 New York Times bestseller, “a landmark in American literature” (Chicago Sun-Times)—about seven adults who return to their hometown to confront a nightmare they had first stumbled on as teenagers…an evil without a name: It.\n\nWelcome to Derry, Maine. It’s a small city, a place as hauntingly familiar as your own hometown. Only in Derry the haunting is real.\n\nThey were seven teenagers when they first stumbled upon the horror. Now they are grown-up men and women who have gone out into the big world to gain success and happiness. But the promise they made twenty-eight years ago calls them reunite in the same place where, as teenagers, they battled an evil creature that preyed on the city’s children. Now, children are being murdered again and their repressed memories of that terrifying summer return as they prepare to once again battle the monster lurking in Derry’s sewers.\n\nReaders of Stephen King know that Derry, Maine, is a place with a deep, dark hold on the author. It reappears in many of his books, including Bag of Bones, Hearts in Atlantis, and 11/22/63. But it all starts with It.\n\n“Stephen King’s most mature work” (St. Petersburg Times), “It will overwhelm you…to be read in a well-lit room only” (Los Angeles Times)."
+      },
+      {
+        "id": "11",
+        "name": "The Hobbit",
+        "author": {
+          "id": "4",
+          "name": "J. R. R. Tolkien"
+        },
+        "cover": "https://sscdn.co/gcs/studiosol/2022/mobile/book/the-hobbit.jpg",
+        "description": "ilbo Baggins is a hobbit who enjoys a comfortable, unambitious life, rarely travelling further than the pantry of his hobbit-hole in Bag End. But his contentment is disturbed when the wizard, Gandalf, and a company of thirteen dwarves arrive on his doorstep one day, to whisk him away on a journey ‘there and back again’. They have a plot to raid the treasure hoard of Smaug the Magnificent, a large and very dangerous dragon…\n\nThe prelude to THE LORD OF THE RINGS, THE HOBBIT has sold many millions of copies since its publication in 1937, establishing itself as one of the most beloved and influential books of the twentieth century."
+      },
+      {
+        "id": "14",
+        "name": "The Silmarillion",
+        "author": {
+          "id": "4",
+          "name": "J. R. R. Tolkien"
+        },
+        "cover": "https://sscdn.co/gcs/studiosol/2022/mobile/book/the-silmarillion.jpg",
+        "description": "The forerunner to The Lord of the Rings, The Silmarillion fills in the background which lies behind the more popular work, and gives the earlier history of Middle-earth, introducing some of the key characters.\n\nThe Silmarillion is an account of the Elder Days, of the First Age of Tolkien’s world. It is the ancient drama to which the characters in The Lord of the Rings look back, and in whose events some of them such as Elrond and Galadriel took part. The tales of The Silmarillion are set in an age when Morgoth, the first Dark Lord, dwelt in Middle-Earth, and the High Elves made war upon him for the recovery of the Silmarils, the jewels containing the pure light of Valinor.\n\nIncluded in the book are several shorter works. The Ainulindale is a myth of the Creation and in the Valaquenta the nature and powers of each of the gods is described. The Akallabeth recounts the downfall of the great island kingdom of Númenor at the end of the Second Age and Of the Rings of Power tells of the great events at the end of the Third Age, as narrated in The Lord of the Rings."
+      },
+      {
+        "id": "15",
+        "name": "O Evangelho Segundo um Humorista",
+        "author": {
+          "id": "5",
+          "name": "Afonso Padilha"
+        },
+        "cover": "https://sscdn.co/gcs/studiosol/2022/mobile/book/o-evangelho-segundo-um-humorista.jpg",
+        "description": "O evangelho segundo um humorista é um apanhado de cenas, esquetes, crônicas, textos humorísticos sem um gênero definido baseado nas premissas do velho e do novo testamento. Usando como referências as histórias mais conhecidas do imaginário popular, pensando em novas situações ou outros pontos de vista em cima das já existentes."
+      },
+      {
+        "id": "17",
+        "name": "The Return",
+        "author": {
+          "id": "6",
+          "name": "Nicholas Sparks"
+        },
+        "cover": "https://sscdn.co/gcs/studiosol/2022/mobile/book/the-return.jpg",
+        "description": "A house full of love. A house full of secrets.\n\n#1 New York Times bestselling author Nicholas Sparks is back with his best novel yet.\n\n*\n\nTrevor Benson never intended to return to North Carolina.\nBut here he is, back where it all began.\n\nTrevor found himself unable to resist the call home when he inherited a tumbledown cabin from his grandfather. He's come back to live the simple life but nothing here is simple.\n\nThere's Callie, the sullen local teenager who seems to know more than she should about Trevor's grandfather's death. And there's Natalie, the deputy sheriff intent on making a point and lingering in Trevor's mind long after she's left his porch.\n\nIn a bid to unravel Natalie and Callie's secrets and to find out what really happened to his grandfather, Trevor is about to learn more than he's bargained for - that sometimes, in order to move forward, we have to return to the place where it all began.\n\nPraise for Nicholas Sparks:\n\n'A fiercely romantic and touching tale' Heat\n\n'An A-grade romantic read' OK!\n\n'Pulls at the heartstrings' Sunday Times\n\n'An absorbing page-turner' Daily Mail\n\n'This one won't leave a dry eye' Daily Mirror"
+      }
+    ]
+  }
+}

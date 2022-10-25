@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class LibraryTableViewCell: UITableViewCell {
 
@@ -23,6 +24,24 @@ class LibraryTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+
+    func prepareCell(with book: FavoriteBook) {
+        bookTitle.text = book.name
+        authorName.text = book.author?.name
+        
+        setupImageCover(with: book)
+    }
+
+    func setupImageCover(with book: FavoriteBook) {
+        bookImage.layer.cornerRadius = 20
+        if let url = URL(string: book.cover ?? " ") {
+            bookImage.kf.indicatorType = .activity
+            bookImage.kf.setImage(with: url)
+        } else {
+            bookImage.image = nil
+        }
+    
     }
 
 }
