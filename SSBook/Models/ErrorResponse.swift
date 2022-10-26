@@ -1,5 +1,5 @@
 //
-//  ErrorModel.swift
+//  ErrorResponse.swift
 //  SSBook
 //
 //  Created by Lorhany Moraes on 25/10/22.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum ErrorModel {
+enum ErrorResponse {
     case noData
     case invalidJSON
     case noResponse

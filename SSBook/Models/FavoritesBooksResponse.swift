@@ -7,16 +7,14 @@
 
 import Foundation
 
-struct FavoriteData: Codable {
+struct FavoritesBooksResponse: Codable {
     let data: DataClass?
 }
 
-// MARK: - DataClass
 struct DataClass: Codable {
     let favoriteBooks: [FavoriteBook]?
 }
 
-// MARK: - FavoriteBook
 struct FavoriteBook: Codable {
     let id, name: String?
     let author: Author?
@@ -29,7 +27,6 @@ struct FavoriteBook: Codable {
     }
 }
 
-// MARK: - Author
 struct Author: Codable {
     let id: String?
     let name: String?

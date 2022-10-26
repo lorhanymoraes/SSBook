@@ -34,7 +34,7 @@ class LibraryTableViewCell: UITableViewCell {
     }
 
     func setupImageCover(with book: FavoriteBook) {
-        bookImage.layer.cornerRadius = 20
+        bookImage.layer.cornerRadius = 10
         if let url = URL(string: book.cover ?? " ") {
             bookImage.kf.indicatorType = .activity
             bookImage.kf.setImage(with: url)

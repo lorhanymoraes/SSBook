@@ -21,7 +21,7 @@ class BookCollectionViewCell: UICollectionViewCell {
     }
     
     func setupImageCover(with book: FavoriteBook) {
-        coverImage.layer.cornerRadius = 20
+        coverImage.layer.cornerRadius = 10
         if let url = URL(string: book.cover ?? " ") {
             coverImage.kf.indicatorType = .activity
             coverImage.kf.setImage(with: url)

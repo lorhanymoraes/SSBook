@@ -8,30 +8,36 @@
 import UIKit
 import Kingfisher
 
+
 class InfoViewController: UIViewController {
 
     @IBOutlet weak var coverBookImage: UIImageView!
     @IBOutlet weak var lbTitle: UILabel!
     @IBOutlet weak var lbAuthor: UILabel!
     @IBOutlet weak var tfOverview: UITextView!
+    @IBOutlet var infoView: UIView!
+    @IBOutlet var backButton: UIButton!
+    @IBOutlet var detailsButton: UIButton!
     
-    var infoPresenter: InfoViewControllerPresenter?
+    
+    var infoPresenter = InfoViewPresenter()
     var infoBooks: FavoriteBook?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        infoPresenter?.getOverviewBook()
+        setupView()
     }
     
-    func setupView(with overview: FavoriteBook) {
-        lbTitle.text = overview.name
-        lbAuthor.text = overview.author?.name
-        tfOverview.text = overview.favoriteBookDescription
-        setupImageCover(with: overview)
+    func setupView() {
+        lbTitle.text = infoBooks?.name
+        lbAuthor.text = infoBooks?.author?.name
+        tfOverview.text = infoBooks?.favoriteBookDescription
+        setupImageCover(with: infoBooks)
+        infoView.layer.cornerRadius = 20
     }
     
-    func setupImageCover(with book: FavoriteBook) {
-        if let url = URL(string: book.cover ?? " ") {
+    func setupImageCover(with book: FavoriteBook?) {
+        if let url = URL(string: book?.cover ?? " ") {
             coverBookImage.kf.indicatorType = .activity
             coverBookImage.kf.setImage(with: url)
         } else {
@@ -39,12 +45,28 @@ class InfoViewController: UIViewController {
         }
     
     }
-
-}
-
-extension InfoViewController: InfoViewControllerProtocol {
-    func getOverviewBook() {
+    
+    @IBAction func tappedBackButton(_ sender: UIButton) {
+        dismiss(animated: true)
+    }
+    
+    @IBAction func tappedDetailsButton(_ sender: UIButton) {
+        guard let title = lbTitle.text else { return }
+        guard let author = lbAuthor.text else { return }
+        let cover = setupImageCover(with: infoBooks)
+        let activityViewController = UIActivityViewController(activityItems: [title, author, cover], applicationActivities: nil)
+        present(activityViewController, animated: true, completion: nil)
         
     }
+    
+}
+
+
+   
+
+extension InfoViewController: InfoViewPresenterDelegate {
+    func reloadView() {
+    }
+    
     
 }

@@ -6,39 +6,48 @@
 //
 
 import UIKit
+import Kingfisher
 
+class InitialViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate & UINavigationControllerDelegate {
+    
+    var initialViewPresenter = InitialViewPresenter()
+    
 
-class InitialViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    
-    var initialPresenter: InitialViewControllerPresenter?
-    var booksInfos: [FavoriteBook] = []
-    var allBooks: [FavoriteBook]?
-    var favAuthors: [FavoriteAuthor] = []
-    let tableView = UITableView()
-    
-    @IBOutlet weak var userImage: UIImageView!
+    @IBOutlet var userImage: UIImageView!
     @IBOutlet var categorysbuttons: [UIButton]!
-    
     @IBOutlet weak var collectionViewBooks: UICollectionView!
     @IBOutlet weak var collectionViewAuthors: UICollectionView!
+    @IBOutlet weak var tableViewFavoritesAuthors: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupImage()
         setupButtons()
-        initialPresenter?.getBooks()
-        initialPresenter?.getAuthors()
-        collectionViewBooks.reloadData()
-        collectionViewAuthors.reloadData()
-        tableView.reloadData()
-        tableView.delegate = self
-        tableView.dataSource = self
+        setupViews()
+        initialViewPresenter.getBooks()
+        initialViewPresenter.getAuthors()
+    }
+    
+    func setupViews() {
+        tableViewFavoritesAuthors.delegate = self
+        tableViewFavoritesAuthors.dataSource = self
+        collectionViewBooks.delegate = self
+        collectionViewBooks.dataSource = self
+        collectionViewAuthors.delegate = self
+        collectionViewAuthors.dataSource = self
     }
     
     func setupImage() {
         userImage.layer.cornerRadius = userImage.frame.size.height/2
         userImage.layer.borderColor = UIColor.gray.cgColor
         userImage.layer.borderWidth = 1
+        
+        if let url = URL(string: "https://sscdn.co/gcs/studiosol/2022/mobile/avatar.jpg") {
+            userImage.kf.indicatorType = .activity
+            userImage.kf.setImage(with: url)
+        } else {
+            userImage.image = nil
+        }
     }
     
     func setupButtons() {
@@ -50,92 +59,60 @@ class InitialViewController: UIViewController, UITableViewDelegate, UITableViewD
         
     }
     
-    
-    private func setupCell(_ indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "table cell", for: indexPath) as? LibraryTableViewCell, let favoriteBook = (allBooks?[indexPath.row]) else { return UITableViewCell() }
-        cell.prepareCell(with: favoriteBook)
-        return cell
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let controller = segue.destination as? InfoViewController else {return}
+        let showBooks = initialViewPresenter.booksInfos[collectionViewBooks.indexPathsForSelectedItems?.first!.row ?? 0]
+        controller.infoBooks = showBooks
     }
     
+    
+
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        booksInfos.count
+        return initialViewPresenter.numberOfRowsInSection(section)
     }
     
     internal func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        setupCell(indexPath)
-        
+        return initialViewPresenter.setupCell(tableView, indexPath)
+    }
+}
+
+extension InitialViewController: InitialViewPresenterDelegate {
+    
+    func reloadTableViewBooks() {
+        tableViewFavoritesAuthors.reloadData()
     }
     
-    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
-        if(velocity.y>0) {
-            UIView.animate(withDuration: 2.5, delay: 0, options: UIView.AnimationOptions(), animations: {
-                self.navigationController?.setNavigationBarHidden(true, animated: true)
-                self.tabBarController?.tabBar.isHidden = true
-                print("Hide")
-            }, completion: nil)
-            
-        } else {
-            UIView.animate(withDuration: 2.5, delay: 0, options: UIView.AnimationOptions(), animations: {
-                self.navigationController?.setNavigationBarHidden(false, animated: true)
-                self.tabBarController?.tabBar.isHidden = false
-                print("Unhide")
-            }, completion: nil)
-        }
+    func reloadCollectionViews() {
+        collectionViewBooks.reloadData()
+        collectionViewAuthors.reloadData()
     }
     
 }
 
-extension InitialViewController: InitialViewControllerProtocol {
-    func getAuthors() {
-    }
-    func getbooks() {
-    }
-}
-
-
-extension InitialViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+extension InitialViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == self.collectionViewBooks {
-            return booksInfos.count
+            return initialViewPresenter.numberOfRowsInSectionForCollectionBooks(section)
         } else {
-            return  favAuthors.count
+            return  initialViewPresenter.numberOfRowsInSectionForCollectionAuthors(section)
         }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if collectionView == self.collectionViewBooks {
-            
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "collection book cell", for: indexPath) as! BookCollectionViewCell
-            
-            let favoriteBook = (booksInfos[indexPath.row])
-            
-            cell.prepareCell(with: favoriteBook)
-            
-            return cell
+        
+            return initialViewPresenter.setupBooksCollectionCell(collectionView, indexPath: indexPath)
         } else {
             
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "author collection cell", for: indexPath) as! AuthorCollectionViewCell
-            let favoriteAuthors = favAuthors[indexPath.row]
-            cell.prepareaAuthorCell(with: favoriteAuthors)
-            return cell
+            return initialViewPresenter.setupAuthorsCollectionCell(collectionView, indexPath: indexPath)
         }
     }
     
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        self.performSegue(withIdentifier: "segueInfo", sender: indexPath)
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "segueInfo" {
-            let indexPath: IndexPath = sender as! IndexPath
-            let viewControllerDestination = segue.destination as! InfoViewController
-            let books = booksInfos[indexPath.row]
-            viewControllerDestination.infoBooks = books
-            navigationController?.pushViewController(viewControllerDestination, animated: true)
-            
-        }
-    }
+
 }
 
 
