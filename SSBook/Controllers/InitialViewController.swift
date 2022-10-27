@@ -75,12 +75,13 @@ class InitialViewController: UIViewController, UITableViewDelegate, UITableViewD
     func showMessage(type: ErrorResponse) {
         let title = type == .error ? "Aviso" : "Erro"
         let message = type == .error ? "Algo inesperado ocorreu" : "Não foi possível carregar os livros"
-        
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let cancelAction = UIAlertAction(title: "Cancelar", style: .cancel, handler: nil)
-        alert.addAction(cancelAction)
+        let okAction = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
+        alert.addAction(okAction)
         
-        present(alert, animated: true)
+        DispatchQueue.main.async {
+            self.present(alert, animated: true)
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

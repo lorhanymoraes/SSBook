@@ -58,10 +58,8 @@ class InitialViewPresenter {
         } OnError: { error in
             delegate?.showAlert(type: .error)
         }
-        
     }
     
-
     func numberOfRowsInSection(_ section: Int) -> Int {
         return allBooks?.data?.allBooks?.count ?? 0
     }
