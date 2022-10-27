@@ -17,7 +17,7 @@ class AuthorCollectionViewCell: UICollectionViewCell {
         guard let author = author else {return}
         authorTitle.text = author.name
         let intCountBooks : String = String(author.booksCount ?? 0)
-        authorBooks.text = intCountBooks
+        authorBooks.text = intCountBooks + (" livros")
         setupImage(with: author)
         self.layer.cornerRadius = 10
         self.layer.borderWidth = 0.8

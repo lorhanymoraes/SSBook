@@ -21,6 +21,8 @@
 		0D74568E29084FED0072A8BA /* AuthorDataResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D74568D29084FED0072A8BA /* AuthorDataResponse.swift */; };
 		0D745692290858970072A8BA /* InfoViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D745691290858970072A8BA /* InfoViewPresenter.swift */; };
 		0D7456942908591C0072A8BA /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7456932908591C0072A8BA /* ErrorResponse.swift */; };
+		0DA28CFD290A185C00DB02EB /* UserImageJSON.json in Resources */ = {isa = PBXBuildFile; fileRef = 0DA28CFC290A185C00DB02EB /* UserImageJSON.json */; };
+		0DA28CFF290A193E00DB02EB /* UserImageResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA28CFE290A193E00DB02EB /* UserImageResponse.swift */; };
 		0DED43722903177900EC438A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DED43712903177900EC438A /* AppDelegate.swift */; };
 		0DED43742903177900EC438A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DED43732903177900EC438A /* SceneDelegate.swift */; };
 		0DED43792903177900EC438A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DED43772903177900EC438A /* Main.storyboard */; };
@@ -47,6 +49,8 @@
 		0D74568D29084FED0072A8BA /* AuthorDataResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorDataResponse.swift; sourceTree = "<group>"; };
 		0D745691290858970072A8BA /* InfoViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewPresenter.swift; sourceTree = "<group>"; };
 		0D7456932908591C0072A8BA /* ErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ErrorResponse.swift; path = SSBook/Models/ErrorResponse.swift; sourceTree = SOURCE_ROOT; };
+		0DA28CFC290A185C00DB02EB /* UserImageJSON.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = UserImageJSON.json; path = SSBook/Controllers/UserImageJSON.json; sourceTree = SOURCE_ROOT; };
+		0DA28CFE290A193E00DB02EB /* UserImageResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UserImageResponse.swift; path = SSBook/Services/UserImageResponse.swift; sourceTree = SOURCE_ROOT; };
 		0DED436E2903177900EC438A /* SSBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SSBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DED43712903177900EC438A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0DED43732903177900EC438A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -87,6 +91,7 @@
 		0D539CB929071B70007C75D2 /* Mock */ = {
 			isa = PBXGroup;
 			children = (
+				0DA28CFC290A185C00DB02EB /* UserImageJSON.json */,
 				0D74568A29084F760072A8BA /* AuthorJSON.json */,
 				0D539CB729071A85007C75D2 /* FavoritesBooksJSON.json */,
 			);
@@ -150,6 +155,7 @@
 		0D7456952908A7BC0072A8BA /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				0DA28CFE290A193E00DB02EB /* UserImageResponse.swift */,
 				0D539CBA29071C70007C75D2 /* FavoritesBooksResponse.swift */,
 				0D74568D29084FED0072A8BA /* AuthorDataResponse.swift */,
 				0D7456932908591C0072A8BA /* ErrorResponse.swift */,
@@ -276,6 +282,7 @@
 				0DED437B2903177B00EC438A /* Assets.xcassets in Resources */,
 				0DED438A290317C300EC438A /* BebasNeue-Regular.ttf in Resources */,
 				0D74568B29084F760072A8BA /* AuthorJSON.json in Resources */,
+				0DA28CFD290A185C00DB02EB /* UserImageJSON.json in Resources */,
 				0DED4388290317B500EC438A /* Roboto-Regular.ttf in Resources */,
 				0DED4387290317B500EC438A /* Roboto-Bold.ttf in Resources */,
 				0DED43792903177900EC438A /* Main.storyboard in Resources */,
@@ -341,6 +348,7 @@
 				0D539CAF2906F303007C75D2 /* LibraryTableViewCell.swift in Sources */,
 				0DED43722903177900EC438A /* AppDelegate.swift in Sources */,
 				0D539CB629071A53007C75D2 /* NetworkServices.swift in Sources */,
+				0DA28CFF290A193E00DB02EB /* UserImageResponse.swift in Sources */,
 				0D539CB22906F54D007C75D2 /* InfoViewController.swift in Sources */,
 				0D745692290858970072A8BA /* InfoViewPresenter.swift in Sources */,
 				0DED43742903177900EC438A /* SceneDelegate.swift in Sources */,

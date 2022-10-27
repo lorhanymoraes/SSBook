@@ -33,7 +33,9 @@ class InfoViewController: UIViewController {
         lbAuthor.text = infoBooks?.author?.name
         tfOverview.text = infoBooks?.favoriteBookDescription
         setupImageCover(with: infoBooks)
-        infoView.layer.cornerRadius = 20
+        infoView.clipsToBounds = true
+        infoView.layer.cornerRadius = 30
+        infoView.layer.maskedCorners = [.layerMinXMinYCorner]
     }
     
     func setupImageCover(with book: FavoriteBook?) {
@@ -53,20 +55,15 @@ class InfoViewController: UIViewController {
     @IBAction func tappedDetailsButton(_ sender: UIButton) {
         guard let title = lbTitle.text else { return }
         guard let author = lbAuthor.text else { return }
-        let cover = setupImageCover(with: infoBooks)
-        let activityViewController = UIActivityViewController(activityItems: [title, author, cover], applicationActivities: nil)
+        let activityViewController = UIActivityViewController(activityItems: [title, author], applicationActivities: nil)
         present(activityViewController, animated: true, completion: nil)
         
     }
     
 }
 
-
-   
-
 extension InfoViewController: InfoViewPresenterDelegate {
-    func reloadView() {
     }
     
     
-}
+

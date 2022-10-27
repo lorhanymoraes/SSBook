@@ -13,6 +13,8 @@ class InitialViewController: UIViewController, UITableViewDelegate, UITableViewD
     var initialViewPresenter = InitialViewPresenter()
     
 
+    @IBOutlet var secondView: UIView!
+    @IBOutlet var firstView: UIView!
     @IBOutlet var userImage: UIImageView!
     @IBOutlet var categorysbuttons: [UIButton]!
     @IBOutlet weak var collectionViewBooks: UICollectionView!
@@ -26,6 +28,7 @@ class InitialViewController: UIViewController, UITableViewDelegate, UITableViewD
         setupViews()
         initialViewPresenter.getBooks()
         initialViewPresenter.getAuthors()
+        initialViewPresenter.getImageUser()
     }
     
     func setupViews() {
@@ -35,6 +38,15 @@ class InitialViewController: UIViewController, UITableViewDelegate, UITableViewD
         collectionViewBooks.dataSource = self
         collectionViewAuthors.delegate = self
         collectionViewAuthors.dataSource = self
+        
+        firstView.clipsToBounds = true
+
+        firstView.layer.cornerRadius = 30
+        firstView.layer.maskedCorners = [.layerMaxXMaxYCorner]
+        secondView.clipsToBounds = true
+        secondView.layer.cornerRadius = 30
+        secondView.layer.maskedCorners = [.layerMinXMinYCorner]
+
     }
     
     func setupImage() {
@@ -42,12 +54,32 @@ class InitialViewController: UIViewController, UITableViewDelegate, UITableViewD
         userImage.layer.borderColor = UIColor.gray.cgColor
         userImage.layer.borderWidth = 1
         
-        if let url = URL(string: "https://sscdn.co/gcs/studiosol/2022/mobile/avatar.jpg") {
-            userImage.kf.indicatorType = .activity
-            userImage.kf.setImage(with: url)
-        } else {
-            userImage.image = nil
-        }
+        downloadImage(from: initialViewPresenter.userImage?.dataImage?.userPicture)
+//
+//        if let url = URL(string: initialViewPresenter.userImage?.dataImage?.userPicture ?? " ") {
+//            print(url)
+//            userImage.kf.indicatorType = .activity
+//            userImage.kf.setImage(with: url)
+//        } else {
+//            userImage.image = nil
+//        }
+        
+//        if let url = URL(string: "https://sscdn.co/gcs/studiosol/2022/mobile/avatar.jpg") {
+//            userImage.kf.indicatorType = .activity
+//            userImage.kf.setImage(with: url)
+//        } else {
+//            userImage.image = nil
+//        }
+    }
+    
+    func downloadImage(from url: String?) {
+        guard let urlString = url, let url = URL(string: urlString) else { return }
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            guard let data = data, error == nil else { return }
+            DispatchQueue.main.async() { [weak self] in
+                self?.userImage.image = UIImage(data: data)
+            }
+        }.resume()
     }
     
     func setupButtons() {
@@ -79,6 +111,9 @@ class InitialViewController: UIViewController, UITableViewDelegate, UITableViewD
 }
 
 extension InitialViewController: InitialViewPresenterDelegate {
+    func loadUserImage() {
+    }
+    
     
     func reloadTableViewBooks() {
         tableViewFavoritesAuthors.reloadData()

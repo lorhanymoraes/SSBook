@@ -11,6 +11,7 @@ import UIKit
 protocol InitialViewPresenterDelegate {
     func reloadTableViewBooks()
     func reloadCollectionViews()
+    func loadUserImage()
 }
 
 class InitialViewPresenter {
@@ -19,6 +20,7 @@ class InitialViewPresenter {
     
     var booksInfos: [FavoriteBook] = []
     var favAuthors: AuthorDataResponse?
+    var userImage: UserImageResponse?
     
     func getBooks() {
         NetworkServices.shared.getFavoritesBooks{ favorites in
@@ -38,10 +40,9 @@ class InitialViewPresenter {
     }
     
     func getAuthors() {
-        NetworkServicesAuthor.shared.getFavoritesAuthors { authors in
+        NetworkServices.shared.getFavoritesAuthors { authors in
             self.favAuthors = authors
             self.delegate?.reloadTableViewBooks()
-            self.delegate?.reloadCollectionViews()
         } OnError: { error in
             switch error {
             case .invalidJSON:
@@ -54,6 +55,25 @@ class InitialViewPresenter {
         }
         
     }
+    
+    func getImageUser() {
+        NetworkServices.shared.getUserImage { image in
+            self.userImage = image
+            self.delegate?.loadUserImage()
+        } OnError: { error in
+            switch error {
+            case .invalidJSON:
+                print("JSON error")
+            case .noData:
+                print("Data error")
+            case .noResponse:
+                print("Response error")
+            }
+        }
+
+    }
+    
+
     
     func numberOfRowsInSection(_ section: Int) -> Int {
         return booksInfos.count

@@ -25,11 +25,7 @@ class NetworkServices {
             }
         }
     }
-}
-
-class NetworkServicesAuthor {
-
-    static let shared = NetworkServicesAuthor()
+    
 
     func getFavoritesAuthors(onSuccess: (AuthorDataResponse) -> Void, OnError: (ErrorResponse) -> Void) {
        
@@ -45,4 +41,22 @@ class NetworkServicesAuthor {
             }
         }
     }
+    
+    func getUserImage(onSuccess: (UserImageResponse) -> Void, OnError: (ErrorResponse) -> Void) {
+       
+        if let path = Bundle.main.path(forResource: "UserImageJSON", ofType: "json") {
+            do {
+                let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
+                let decoder = JSONDecoder()
+                let favoriteMovies = try decoder.decode(UserImageResponse.self, from: data)
+                onSuccess(favoriteMovies)
+            } catch {
+                print(error.localizedDescription)
+                OnError(.noResponse)
+            }
+        }
+    }
+    
+    
 }
+
