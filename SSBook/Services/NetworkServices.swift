@@ -69,6 +69,8 @@ class NetworkServices {
                 print(error.localizedDescription)
                 OnError(.error)
             }
+        } else {
+            OnError(.error)
         }
     }
 }

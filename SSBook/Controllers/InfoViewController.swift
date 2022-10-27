@@ -11,6 +11,9 @@ import Kingfisher
 
 class InfoViewController: UIViewController {
     
+    
+    
+    @IBOutlet var isFavorite: UIButton!
     @IBOutlet weak var coverBookImage: UIImageView!
     @IBOutlet weak var lbTitle: UILabel!
     @IBOutlet weak var lbAuthor: UILabel!
@@ -47,6 +50,9 @@ class InfoViewController: UIViewController {
         }
     }
     
+    func setupButtonFavorite() {
+    }
+    
     
     @IBAction func tappedBackButton(_ sender: UIButton) {
         dismiss(animated: true)
@@ -58,6 +64,8 @@ class InfoViewController: UIViewController {
         present(activityViewController, animated: true, completion: nil)
         
     }
+    
+    
     
 }
 

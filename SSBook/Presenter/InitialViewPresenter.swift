@@ -12,6 +12,7 @@ protocol InitialViewPresenterDelegate {
     func reloadTableViewBooks()
     func reloadCollectionViews()
     func loadUserImage()
+    func showAlert()
 }
 
 class InitialViewPresenter {
@@ -27,10 +28,7 @@ class InitialViewPresenter {
             self.booksInfos = favorites.data?.favoriteBooks ?? []
             self.delegate?.reloadCollectionViews()
         } OnError: { error in
-            switch error {
-            case .error:
-                showMessage(type: .error)
-            }
+            delegate?.showAlert()
         }
     }
     
@@ -39,25 +37,18 @@ class InitialViewPresenter {
             self.favAuthors = authors
             self.delegate?.reloadTableViewBooks()
         } OnError: { error in
-            switch error {
-            case .error:
-                showMessage(type: .error)
+            delegate?.showAlert()
             }
         }
         
-    }
     
     func getAllBooks() {
         NetworkServices.shared.getAllBooks { books in
             self.allBooks = books
             self.delegate?.reloadTableViewBooks()
         } OnError: { error in
-            switch error {
-            case .error:
-                showMessage(type: .error)
-            }
+            delegate?.showAlert()
         }
-        
     }
     
     func getImageUser() {
@@ -65,24 +56,11 @@ class InitialViewPresenter {
             self.userImage = image
             self.delegate?.loadUserImage()
         } OnError: { error in
-            switch error {
-            case .error:
-                showMessage(type: .error)
-            }
+            delegate?.showAlert()
         }
         
     }
     
-    func showMessage(type: ErrorResponse) {
-        let title = type == .error ? "Aviso" : "Erro"
-        let message = type == .error ? "Algo inesperado ocorreu" : "Não foi possível carregar os livros"
-        
-         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-         let cancelAction = UIAlertAction(title: "Cancelar", style: .cancel, handler: nil)
-         alert.addAction(cancelAction)
-        
-        }
-   
 
     func numberOfRowsInSection(_ section: Int) -> Int {
         return allBooks?.data?.allBooks?.count ?? 0

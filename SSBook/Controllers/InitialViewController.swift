@@ -30,7 +30,6 @@ class InitialViewController: UIViewController, UITableViewDelegate, UITableViewD
         initialViewPresenter.getAuthors()
         initialViewPresenter.getImageUser()
         initialViewPresenter.getAllBooks()
-        initialViewPresenter.showMessage(type: .error)
     }
     
     func setupViews() {
@@ -74,15 +73,29 @@ class InitialViewController: UIViewController, UITableViewDelegate, UITableViewD
         
     }
     
+    func showMessage(type: ErrorResponse) {
+        let title = type == .error ? "Aviso" : "Erro"
+        let message = type == .error ? "Algo inesperado ocorreu" : "Não foi possível carregar os livros"
+        
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let cancelAction = UIAlertAction(title: "Cancelar", style: .cancel, handler: nil)
+        alert.addAction(cancelAction)
+        
+        present(alert, animated: true)
+    }
+
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "segueTableOverview" {
             guard let controller = segue.destination as? InfoViewController else {return}
             let showBooks = initialViewPresenter.allBooks?.data?.allBooks?[tableViewFavoritesAuthors.indexPathForSelectedRow?.row ?? 0]
             controller.allBooks = showBooks
+
         } else {
             guard let controller = segue.destination as? InfoViewController else {return}
             let showBooks = initialViewPresenter.booksInfos[collectionViewBooks.indexPathsForSelectedItems?.first!.row ?? 0]
             controller.infoBooks = showBooks
+            
         }
     }
     
@@ -98,6 +111,10 @@ class InitialViewController: UIViewController, UITableViewDelegate, UITableViewD
 }
 
 extension InitialViewController: InitialViewPresenterDelegate {
+    func showAlert() {
+        showMessage(type: ErrorResponse.error)
+    }
+    
     
     func loadUserImage() {
         setupImage()
