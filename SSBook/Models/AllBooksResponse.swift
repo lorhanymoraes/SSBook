@@ -13,21 +13,6 @@ struct AllBooksResponse: Codable {
 }
 
 struct AllDataResponse: Codable {
-    let allBooks: [AllBook]?
+    let allBooks: [Book]?
 }
 
-struct AllBook: Codable {
-    let id, name: String?
-    let author: AllAuthor?
-    let cover: String?
-    let allBookDescription: String?
-    
-    enum CodingKeys: String, CodingKey {
-            case id, name, author, cover
-            case allBookDescription = "description"
-        }
-}
-
-struct AllAuthor: Codable {
-    let id, name: String?
-}

@@ -157,11 +157,11 @@
 		0D7456952908A7BC0072A8BA /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				0DA28CFE290A193E00DB02EB /* UserImageResponse.swift */,
 				0D539CBA29071C70007C75D2 /* FavoritesBooksResponse.swift */,
 				0D74568D29084FED0072A8BA /* AuthorDataResponse.swift */,
-				0D7456932908591C0072A8BA /* ErrorResponse.swift */,
+				0DA28CFE290A193E00DB02EB /* UserImageResponse.swift */,
 				0DA28D02290AFFAE00DB02EB /* AllBooksResponse.swift */,
+				0D7456932908591C0072A8BA /* ErrorResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";

@@ -14,7 +14,6 @@ class LibraryTableViewCell: UITableViewCell {
     @IBOutlet weak var bookTitle: UILabel!
     @IBOutlet weak var authorName: UILabel!
     
-    
     override func awakeFromNib() {
         super.awakeFromNib()
     }
@@ -23,15 +22,13 @@ class LibraryTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
-    
-    
-    func prepareCell(with book: AllBook) {
+    func prepareCell(with book: Book) {
         bookTitle.text = book.name
         authorName.text = book.author?.name
         setupImageCover(with: book)
     }
     
-    func setupImageCover(with book: AllBook) {
+    func setupImageCover(with book: Book) {
         bookImage.layer.cornerRadius = 10
         if let url = URL(string: book.cover ?? " ") {
             bookImage.kf.indicatorType = .activity
@@ -39,7 +36,5 @@ class LibraryTableViewCell: UITableViewCell {
         } else {
             bookImage.image = nil
         }
-        
     }
-    
 }

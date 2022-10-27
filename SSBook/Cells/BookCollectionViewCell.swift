@@ -14,13 +14,13 @@ class BookCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var bookTitle: UILabel!
     @IBOutlet weak var authorName: UILabel!
     
-    func prepareCell(with book: FavoriteBook) {
+    func prepareCell(with book: Book) {
         bookTitle.text = book.name
         authorName.text = book.author?.name
         setupImageCover(with: book)
     }
     
-    func setupImageCover(with book: FavoriteBook) {
+    func setupImageCover(with book: Book) {
         coverImage.layer.cornerRadius = 10
         if let url = URL(string: book.cover ?? " ") {
             coverImage.kf.indicatorType = .activity

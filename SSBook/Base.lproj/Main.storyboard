@@ -164,10 +164,10 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="backButton" destination="9Ba-Ux-efu" id="YHz-lh-UaC"/>
+                        <outlet property="btIsFavorite" destination="g30-Fl-aHw" id="RjS-5h-4K2"/>
                         <outlet property="coverBookImage" destination="TbW-uE-mGv" id="gEE-PK-vD6"/>
                         <outlet property="detailsButton" destination="Phu-fT-24V" id="J14-vF-in7"/>
                         <outlet property="infoView" destination="Aa3-Ns-de4" id="0eZ-VI-y54"/>
-                        <outlet property="isFavorite" destination="g30-Fl-aHw" id="jgv-BI-iCu"/>
                         <outlet property="lbAuthor" destination="fOQ-Sa-xAM" id="dFY-Lv-0EL"/>
                         <outlet property="lbTitle" destination="cxR-Ze-iQX" id="Pq5-nI-c7C"/>
                         <outlet property="tfOverview" destination="IOJ-wi-w0z" id="gix-GX-FBe"/>

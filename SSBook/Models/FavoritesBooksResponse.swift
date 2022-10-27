@@ -12,10 +12,10 @@ struct FavoritesBooksResponse: Codable {
 }
 
 struct DataClass: Codable {
-    let favoriteBooks: [FavoriteBook]?
+    let favoriteBooks: [Book]?
 }
 
-struct FavoriteBook: Codable {
+struct Book: Codable {
     let id, name: String?
     let author: Author?
     let cover: String?
@@ -25,11 +25,6 @@ struct FavoriteBook: Codable {
         case id, name, author, cover
         case favoriteBookDescription = "description"
     }
-}
-
-struct Author: Codable {
-    let id: String?
-    let name: String?
 }
 
 

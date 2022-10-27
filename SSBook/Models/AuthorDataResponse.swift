@@ -12,10 +12,10 @@ struct AuthorDataResponse: Codable {
 }
 
 struct FavoriteDataAuthor: Codable {
-    let favoriteAuthors: [FavoriteAuthor]?
+    let favoriteAuthors: [Author]?
 }
 
-struct FavoriteAuthor: Codable {
+struct Author: Codable {
     let id, name: String?
     let picture: String?
     let booksCount: Int?

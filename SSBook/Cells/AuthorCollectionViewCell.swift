@@ -13,7 +13,7 @@ class AuthorCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var authorTitle: UILabel!
     @IBOutlet weak var authorBooks: UILabel!
     
-    func prepareaAuthorCell(with author: FavoriteAuthor?) {
+    func prepareaAuthorCell(with author: Author?) {
         guard let author = author else {return}
         authorTitle.text = author.name
         let intCountBooks : String = String(author.booksCount ?? 0)
@@ -25,7 +25,7 @@ class AuthorCollectionViewCell: UICollectionViewCell {
     }
     
     
-    func setupImage(with author: FavoriteAuthor) {
+    func setupImage(with author: Author) {
         authorImage.layer.cornerRadius = 10
         if let url = URL(string: author.picture ?? " ") {
             authorImage.kf.indicatorType = .activity

@@ -12,13 +12,13 @@ protocol InitialViewPresenterDelegate {
     func reloadTableViewBooks()
     func reloadCollectionViews()
     func loadUserImage()
-    func showAlert()
+    func showAlert(type: ErrorResponse)
 }
 
 class InitialViewPresenter {
     
     var delegate: InitialViewPresenterDelegate?
-    var booksInfos: [FavoriteBook] = []
+    var booksInfos: [Book] = []
     var favAuthors: AuthorDataResponse?
     var userImage: UserImageResponse?
     var allBooks: AllBooksResponse?
@@ -28,7 +28,7 @@ class InitialViewPresenter {
             self.booksInfos = favorites.data?.favoriteBooks ?? []
             self.delegate?.reloadCollectionViews()
         } OnError: { error in
-            delegate?.showAlert()
+            delegate?.showAlert(type: .error)
         }
     }
     
@@ -37,7 +37,7 @@ class InitialViewPresenter {
             self.favAuthors = authors
             self.delegate?.reloadTableViewBooks()
         } OnError: { error in
-            delegate?.showAlert()
+            delegate?.showAlert(type: .error)
             }
         }
         
@@ -47,7 +47,7 @@ class InitialViewPresenter {
             self.allBooks = books
             self.delegate?.reloadTableViewBooks()
         } OnError: { error in
-            delegate?.showAlert()
+            delegate?.showAlert(type: .error)
         }
     }
     
@@ -56,7 +56,7 @@ class InitialViewPresenter {
             self.userImage = image
             self.delegate?.loadUserImage()
         } OnError: { error in
-            delegate?.showAlert()
+            delegate?.showAlert(type: .error)
         }
         
     }

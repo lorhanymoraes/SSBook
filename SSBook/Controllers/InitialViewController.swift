@@ -8,14 +8,13 @@
 import UIKit
 import Kingfisher
 
-class InitialViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate & UINavigationControllerDelegate {
+class InitialViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var initialViewPresenter = InitialViewPresenter()
     
-    
-    @IBOutlet var secondView: UIView!
-    @IBOutlet var firstView: UIView!
-    @IBOutlet var userImage: UIImageView!
+    @IBOutlet weak var secondView: UIView!
+    @IBOutlet weak var firstView: UIView!
+    @IBOutlet weak var userImage: UIImageView!
     @IBOutlet var categorysbuttons: [UIButton]!
     @IBOutlet weak var collectionViewBooks: UICollectionView!
     @IBOutlet weak var collectionViewAuthors: UICollectionView!
@@ -83,23 +82,21 @@ class InitialViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         present(alert, animated: true)
     }
-
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "segueTableOverview" {
             guard let controller = segue.destination as? InfoViewController else {return}
             let showBooks = initialViewPresenter.allBooks?.data?.allBooks?[tableViewFavoritesAuthors.indexPathForSelectedRow?.row ?? 0]
-            controller.allBooks = showBooks
-
+            controller.infoBooks = showBooks
+            controller.bookIsFavorite = false
+            
         } else {
             guard let controller = segue.destination as? InfoViewController else {return}
             let showBooks = initialViewPresenter.booksInfos[collectionViewBooks.indexPathsForSelectedItems?.first!.row ?? 0]
             controller.infoBooks = showBooks
-            
+            controller.bookIsFavorite = true
         }
     }
-    
-    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return initialViewPresenter.numberOfRowsInSection(section)
@@ -111,15 +108,13 @@ class InitialViewController: UIViewController, UITableViewDelegate, UITableViewD
 }
 
 extension InitialViewController: InitialViewPresenterDelegate {
-    func showAlert() {
-        showMessage(type: ErrorResponse.error)
+    func showAlert(type: ErrorResponse) {
+        showMessage(type: type)
     }
-    
     
     func loadUserImage() {
         setupImage()
     }
-    
     
     func reloadTableViewBooks() {
         tableViewFavoritesAuthors.reloadData()
@@ -129,11 +124,9 @@ extension InitialViewController: InitialViewPresenterDelegate {
         collectionViewBooks.reloadData()
         collectionViewAuthors.reloadData()
     }
-    
 }
 
 extension InitialViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-    
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == self.collectionViewBooks {

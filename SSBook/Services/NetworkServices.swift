@@ -23,9 +23,10 @@ class NetworkServices {
                 print(error.localizedDescription)
                 OnError(.error)
             }
+        } else {
+            OnError(.error)
         }
     }
-    
     
     func getFavoritesAuthors(onSuccess: (AuthorDataResponse) -> Void, OnError: (ErrorResponse) -> Void) {
         
@@ -39,6 +40,8 @@ class NetworkServices {
                 print(error.localizedDescription)
                 OnError(.error)
             }
+        } else {
+            OnError(.error)
         }
     }
     
@@ -54,6 +57,8 @@ class NetworkServices {
                 print(error.localizedDescription)
                 OnError(.error)
             }
+        } else {
+            OnError(.error)
         }
     }
     

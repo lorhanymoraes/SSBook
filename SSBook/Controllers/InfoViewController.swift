@@ -13,46 +13,42 @@ class InfoViewController: UIViewController {
     
     
     
-    @IBOutlet var isFavorite: UIButton!
+    @IBOutlet weak var btIsFavorite: UIButton!
     @IBOutlet weak var coverBookImage: UIImageView!
     @IBOutlet weak var lbTitle: UILabel!
     @IBOutlet weak var lbAuthor: UILabel!
     @IBOutlet weak var tfOverview: UITextView!
-    @IBOutlet var infoView: UIView!
-    @IBOutlet var backButton: UIButton!
-    @IBOutlet var detailsButton: UIButton!
+    @IBOutlet weak var infoView: UIView!
+    @IBOutlet weak var backButton: UIButton!
+    @IBOutlet weak var detailsButton: UIButton!
     
-    var infoBooks: FavoriteBook?
-    var allBooks: AllBook?
+    var infoBooks: Book?
+    var bookIsFavorite = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
     }
     
-    
     func setupView() {
-        lbTitle.text = infoBooks?.name ?? allBooks?.name
-        lbAuthor.text = infoBooks?.author?.name ?? allBooks?.author?.name
-        tfOverview.text = infoBooks?.favoriteBookDescription ?? allBooks?.allBookDescription
+        lbTitle.text = infoBooks?.name
+        lbAuthor.text = infoBooks?.author?.name
+        tfOverview.text = infoBooks?.favoriteBookDescription
         setupImageCover()
         infoView.clipsToBounds = true
         infoView.layer.cornerRadius = 30
         infoView.layer.maskedCorners = [.layerMinXMinYCorner]
+        btIsFavorite.setImage(bookIsFavorite ? UIImage(systemName: "heart.fill") : UIImage(systemName: "heart"), for: .normal)
     }
     
     func setupImageCover() {
-        if let url = URL(string: (infoBooks?.cover ?? allBooks?.cover) ?? " ") {
+        if let url = URL(string: (infoBooks?.cover) ?? " ") {
             coverBookImage.kf.indicatorType = .activity
             coverBookImage.kf.setImage(with: url)
         } else {
             coverBookImage.image = nil
         }
     }
-    
-    func setupButtonFavorite() {
-    }
-    
     
     @IBAction func tappedBackButton(_ sender: UIButton) {
         dismiss(animated: true)
@@ -64,8 +60,6 @@ class InfoViewController: UIViewController {
         present(activityViewController, animated: true, completion: nil)
         
     }
-    
-    
     
 }
 
