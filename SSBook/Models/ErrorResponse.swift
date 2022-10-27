@@ -8,7 +8,5 @@
 import Foundation
 
 enum ErrorResponse {
-    case noData
-    case invalidJSON
-    case noResponse
+    case error
 }

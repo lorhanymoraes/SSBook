@@ -33,6 +33,6 @@ class AuthorCollectionViewCell: UICollectionViewCell {
         } else {
             authorImage.image = nil
         }
-    
+        
     }
 }

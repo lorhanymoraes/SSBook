@@ -12,7 +12,7 @@ class InitialViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     var initialViewPresenter = InitialViewPresenter()
     
-
+    
     @IBOutlet var secondView: UIView!
     @IBOutlet var firstView: UIView!
     @IBOutlet var userImage: UIImageView!
@@ -23,12 +23,14 @@ class InitialViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupImage()
         setupButtons()
         setupViews()
+        initialViewPresenter.delegate = self
         initialViewPresenter.getBooks()
         initialViewPresenter.getAuthors()
         initialViewPresenter.getImageUser()
+        initialViewPresenter.getAllBooks()
+        initialViewPresenter.showMessage(type: .error)
     }
     
     func setupViews() {
@@ -40,13 +42,13 @@ class InitialViewController: UIViewController, UITableViewDelegate, UITableViewD
         collectionViewAuthors.dataSource = self
         
         firstView.clipsToBounds = true
-
+        
         firstView.layer.cornerRadius = 30
         firstView.layer.maskedCorners = [.layerMaxXMaxYCorner]
         secondView.clipsToBounds = true
         secondView.layer.cornerRadius = 30
         secondView.layer.maskedCorners = [.layerMinXMinYCorner]
-
+        
     }
     
     func setupImage() {
@@ -54,53 +56,38 @@ class InitialViewController: UIViewController, UITableViewDelegate, UITableViewD
         userImage.layer.borderColor = UIColor.gray.cgColor
         userImage.layer.borderWidth = 1
         
-        downloadImage(from: initialViewPresenter.userImage?.dataImage?.userPicture)
-//
-//        if let url = URL(string: initialViewPresenter.userImage?.dataImage?.userPicture ?? " ") {
-//            print(url)
-//            userImage.kf.indicatorType = .activity
-//            userImage.kf.setImage(with: url)
-//        } else {
-//            userImage.image = nil
-//        }
+        if let url = URL(string: initialViewPresenter.userImage?.data?.userPicture ?? " ") {
+            userImage.kf.indicatorType = .activity
+            userImage.kf.setImage(with: url)
+        } else {
+            userImage.image = nil
+        }
         
-//        if let url = URL(string: "https://sscdn.co/gcs/studiosol/2022/mobile/avatar.jpg") {
-//            userImage.kf.indicatorType = .activity
-//            userImage.kf.setImage(with: url)
-//        } else {
-//            userImage.image = nil
-//        }
-    }
-    
-    func downloadImage(from url: String?) {
-        guard let urlString = url, let url = URL(string: urlString) else { return }
-        URLSession.shared.dataTask(with: url) { data, response, error in
-            guard let data = data, error == nil else { return }
-            DispatchQueue.main.async() { [weak self] in
-                self?.userImage.image = UIImage(data: data)
-            }
-        }.resume()
     }
     
     func setupButtons() {
         categorysbuttons.forEach { button in
             button.layer.borderColor = UIColor.gray.cgColor
-            button.layer.borderWidth = 1
-            button.layer.cornerRadius = button.frame.size.height/4
+            button.layer.borderWidth = 0.8
+            button.layer.cornerRadius = button.frame.size.height/2
         }
         
     }
     
-
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let controller = segue.destination as? InfoViewController else {return}
-        let showBooks = initialViewPresenter.booksInfos[collectionViewBooks.indexPathsForSelectedItems?.first!.row ?? 0]
-        controller.infoBooks = showBooks
+        if segue.identifier == "segueTableOverview" {
+            guard let controller = segue.destination as? InfoViewController else {return}
+            let showBooks = initialViewPresenter.allBooks?.data?.allBooks?[tableViewFavoritesAuthors.indexPathForSelectedRow?.row ?? 0]
+            controller.allBooks = showBooks
+        } else {
+            guard let controller = segue.destination as? InfoViewController else {return}
+            let showBooks = initialViewPresenter.booksInfos[collectionViewBooks.indexPathsForSelectedItems?.first!.row ?? 0]
+            controller.infoBooks = showBooks
+        }
     }
     
     
-
-
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return initialViewPresenter.numberOfRowsInSection(section)
     }
@@ -111,7 +98,9 @@ class InitialViewController: UIViewController, UITableViewDelegate, UITableViewD
 }
 
 extension InitialViewController: InitialViewPresenterDelegate {
+    
     func loadUserImage() {
+        setupImage()
     }
     
     
@@ -139,7 +128,7 @@ extension InitialViewController: UICollectionViewDelegate, UICollectionViewDataS
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if collectionView == self.collectionViewBooks {
-        
+            
             return initialViewPresenter.setupBooksCollectionCell(collectionView, indexPath: indexPath)
         } else {
             
@@ -147,7 +136,6 @@ extension InitialViewController: UICollectionViewDelegate, UICollectionViewDataS
         }
     }
     
-
 }
 
 

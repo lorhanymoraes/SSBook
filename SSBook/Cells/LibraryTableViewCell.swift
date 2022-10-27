@@ -9,7 +9,7 @@ import UIKit
 import Kingfisher
 
 class LibraryTableViewCell: UITableViewCell {
-
+    
     @IBOutlet weak var bookImage: UIImageView!
     @IBOutlet weak var bookTitle: UILabel!
     @IBOutlet weak var authorName: UILabel!
@@ -17,23 +17,21 @@ class LibraryTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
-
-    func prepareCell(with book: FavoriteBook) {
+    
+    
+    
+    func prepareCell(with book: AllBook) {
         bookTitle.text = book.name
         authorName.text = book.author?.name
-        
         setupImageCover(with: book)
     }
-
-    func setupImageCover(with book: FavoriteBook) {
+    
+    func setupImageCover(with book: AllBook) {
         bookImage.layer.cornerRadius = 10
         if let url = URL(string: book.cover ?? " ") {
             bookImage.kf.indicatorType = .activity
@@ -41,7 +39,7 @@ class LibraryTableViewCell: UITableViewCell {
         } else {
             bookImage.image = nil
         }
-    
+        
     }
-
+    
 }

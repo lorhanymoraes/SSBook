@@ -13,7 +13,7 @@ class BookCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var coverImage: UIImageView!
     @IBOutlet weak var bookTitle: UILabel!
     @IBOutlet weak var authorName: UILabel!
- 
+    
     func prepareCell(with book: FavoriteBook) {
         bookTitle.text = book.name
         authorName.text = book.author?.name
@@ -28,6 +28,6 @@ class BookCollectionViewCell: UICollectionViewCell {
         } else {
             coverImage.image = nil
         }
-    
+        
     }
 }

@@ -17,24 +17,19 @@ protocol InitialViewPresenterDelegate {
 class InitialViewPresenter {
     
     var delegate: InitialViewPresenterDelegate?
-    
     var booksInfos: [FavoriteBook] = []
     var favAuthors: AuthorDataResponse?
     var userImage: UserImageResponse?
+    var allBooks: AllBooksResponse?
     
     func getBooks() {
         NetworkServices.shared.getFavoritesBooks{ favorites in
             self.booksInfos = favorites.data?.favoriteBooks ?? []
             self.delegate?.reloadCollectionViews()
-            self.delegate?.reloadTableViewBooks()
         } OnError: { error in
             switch error {
-            case .invalidJSON:
-                print("JSON error")
-            case .noData:
-                print("Data error")
-            case .noResponse:
-                print("Response error")
+            case .error:
+                showMessage(type: .error)
             }
         }
     }
@@ -45,12 +40,21 @@ class InitialViewPresenter {
             self.delegate?.reloadTableViewBooks()
         } OnError: { error in
             switch error {
-            case .invalidJSON:
-                print("JSON error")
-            case .noData:
-                print("Data error")
-            case .noResponse:
-                print("Response error")
+            case .error:
+                showMessage(type: .error)
+            }
+        }
+        
+    }
+    
+    func getAllBooks() {
+        NetworkServices.shared.getAllBooks { books in
+            self.allBooks = books
+            self.delegate?.reloadTableViewBooks()
+        } OnError: { error in
+            switch error {
+            case .error:
+                showMessage(type: .error)
             }
         }
         
@@ -62,27 +66,32 @@ class InitialViewPresenter {
             self.delegate?.loadUserImage()
         } OnError: { error in
             switch error {
-            case .invalidJSON:
-                print("JSON error")
-            case .noData:
-                print("Data error")
-            case .noResponse:
-                print("Response error")
+            case .error:
+                showMessage(type: .error)
             }
         }
-
+        
     }
     
+    func showMessage(type: ErrorResponse) {
+        let title = type == .error ? "Aviso" : "Erro"
+        let message = type == .error ? "Algo inesperado ocorreu" : "Não foi possível carregar os livros"
+        
+         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+         let cancelAction = UIAlertAction(title: "Cancelar", style: .cancel, handler: nil)
+         alert.addAction(cancelAction)
+        
+        }
+   
 
-    
     func numberOfRowsInSection(_ section: Int) -> Int {
-        return booksInfos.count
+        return allBooks?.data?.allBooks?.count ?? 0
     }
     
     func setupCell(_ tableView: UITableView, _ indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "table cell", for: indexPath) as? LibraryTableViewCell else { return UITableViewCell() }
-        let favoritesBooks = booksInfos[indexPath.row]
-        cell.prepareCell(with: favoritesBooks)
+        guard let allBooks = (allBooks?.data?.allBooks?[indexPath.row]) else { return .init() }
+        cell.prepareCell(with: allBooks)
         return cell
     }
     
@@ -108,7 +117,6 @@ class InitialViewPresenter {
     func numberOfRowsInSectionForCollectionAuthors(_ section: Int) -> Int {
         return favAuthors?.data?.favoriteAuthors?.count ?? 0
     }
-    
     
 }
 

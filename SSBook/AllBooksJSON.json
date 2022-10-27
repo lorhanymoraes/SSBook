@@ -1,0 +1,186 @@
+{
+  "data": {
+    "allBooks": [
+      {
+        "id": "1",
+        "name": "Clean Code: A Handbook of Agile Software Craftsmanship",
+        "author": {
+          "id": "1",
+          "name": "Robert Cecil Martin"
+        },
+        "cover": "https://sscdn.co/gcs/studiosol/2022/mobile/book/clean-code.jpg",
+        "description": "Even bad code can function. But if code isn’t clean, it can bring a development organization to its knees. Every year, countless hours and significant resources are lost because of poorly written code. But it doesn’t have to be that way.\n\nNoted software expert Robert C. Martin presents a revolutionary paradigm with Clean Code: A Handbook of Agile Software Craftsmanship. Martin has teamed up with his colleagues from Object Mentor to distill their best agile practice of cleaning code “on the fly” into a book that will instill within you the values of a software craftsman and make you a better programmer–but only if you work at it.\n\nWhat kind of work will you be doing? You’ll be reading code–lots of code. And you will be challenged to think about what’s right about that code, and what’s wrong with it. More importantly, you will be challenged to reassess your professional values and your commitment to your craft.\n\nClean Code is divided into three parts. The first describes the principles, patterns, and practices of writing clean code. The second part consists of several case studies of increasing complexity. Each case study is an exercise in cleaning up code–of transforming a code base that has some problems into one that is sound and efficient. The third part is the payoff: a single chapter containing a list of heuristics and “smells” gathered while creating the case studies. The result is a knowledge base that describes the way we think when we write, read, and clean code.\n\nReaders will come away from this book understanding\nHow to tell the difference between good and bad code\nHow to write good code and how to transform bad code into good code\nHow to create good names, good functions, good objects, and good classes\nHow to format code for maximum readability\nHow to implement complete error handling without obscuring code logic\nHow to unit test and practice test-driven development\nThis book is a must for any developer, software engineer, project manager, team lead, or systems analyst with an interest in producing better code."
+      },
+      {
+        "id": "2",
+        "name": "Clean Architecture: A Craftsman's Guide to Software Structure and Design",
+        "author": {
+          "id": "1",
+          "name": "Robert Cecil Martin"
+        },
+        "cover": "https://sscdn.co/gcs/studiosol/2022/mobile/book/clean-architecture.jpg",
+        "description": "Practical Software Architecture Solutions from the Legendary Robert C. Martin (“Uncle Bob”)\n\n \n\nBy applying universal rules of software architecture, you can dramatically improve developer productivity throughout the life of any software system. Now, building upon the success of his best-selling books Clean Code and The Clean Coder, legendary software craftsman Robert C. Martin (“Uncle Bob”) reveals those rules and helps you apply them.\n\n \n\nMartin’s Clean Architecture doesn’t merely present options. Drawing on over a half-century of experience in software environments of every imaginable type, Martin tells you what choices to make and why they are critical to your success. As you’ve come to expect from Uncle Bob, this book is packed with direct, no-nonsense solutions for the real challenges you’ll face–the ones that will make or break your projects.\n\nLearn what software architects need to achieve–and core disciplines and practices for achieving it\nMaster essential software design principles for addressing function, component separation, and data management\nSee how programming paradigms impose discipline by restricting what developers can do\nUnderstand what’s critically important and what’s merely a “detail”\nImplement optimal, high-level structures for web, database, thick-client, console, and embedded applications\nDefine appropriate boundaries and layers, and organize components and services\nSee why designs and architectures go wrong, and how to prevent (or fix) these failures\nClean Architecture is essential reading for every current or aspiring software architect, systems analyst, system designer, and software manager–and for every programmer who must execute someone else’s designs."
+      },
+      {
+        "id": "3",
+        "name": "The Clean Coder: A Code of Conduct for Professional Programmers",
+        "author": {
+          "id": "1",
+          "name": "Robert Cecil Martin"
+        },
+        "cover": "https://sscdn.co/gcs/studiosol/2022/mobile/book/the-clean-coder.jpg",
+        "description": "Programmers who endure and succeed amidst swirling uncertainty and nonstop pressure share a common attribute: They care deeply about the practice of creating software. They treat it as a craft. They are professionals.\n\nIn The Clean Coder: A Code of Conduct for Professional Programmers, legendary software expert Robert C. Martin introduces the disciplines, techniques, tools, and practices of true software craftsmanship. This book is packed with practical advice–about everything from estimating and coding to refactoring and testing. It covers much more than technique: It is about attitude. Martin shows how to approach software development with honor, self-respect, and pride; work well and work clean; communicate and estimate faithfully; face difficult decisions with clarity and honesty; and understand that deep knowledge comes with a responsibility to act.\n\nReaders will learn\n\nWhat it means to behave as a true software craftsman\nHow to deal with conflict, tight schedules, and unreasonable managers\nHow to get into the flow of coding, and get past writer’s block\nHow to handle unrelenting pressure and avoid burnout\nHow to combine enduring attitudes with new development paradigms\nHow to manage your time, and avoid blind alleys, marshes, bogs, and swamps\nHow to foster environments where programmers and teams can thrive\nWhen to say “No”–and how to say it\nWhen to say “Yes”–and what yes really means\n\nGreat software is something to marvel at: powerful, elegant, functional, a pleasure to work with as both a developer and as a user. Great software isn’t written by machines. It is written by professionals with an unshakable commitment to craftsmanship. The Clean Coder will help you become one of them–and earn the pride and fulfillment that they alone possess."
+      },
+      {
+        "id": "4",
+        "name": "Clean Agile: Back to Basics",
+        "author": {
+          "id": "1",
+          "name": "Robert Cecil Martin"
+        },
+        "cover": "https://sscdn.co/gcs/studiosol/2022/mobile/book/clean-agile.jpg",
+        "description": "Agile Values and Principles for a New Generation\n“In the journey to all things Agile, Uncle Bob has been there, done that, and has the both the t-shirt and the scars to show for it. This delightful book is part history, part personal stories, and all wisdom. If you want to understand what Agile is and how it came to be, this is the book for you.”\n–Grady Booch\n“Bob’s frustration colors every sentence of Clean Agile, but it’s a justified frustration. What is in the world of Agile development is nothing compared to what could be. This book is Bob’s perspective on what to focus on to get to that ‘what could be.’ And he’s been there, so it’s worth listening.”\n–Kent Beck\n“It’s good to read Uncle Bob’s take on Agile. Whether just beginning, or a seasoned Agilista, you would do well to read this book. I agree with almost all of it. It’s just some of the parts make me realize my own shortcomings, dammit. It made me double-check our code coverage (85.09%).”\n–Jon Kern Nearly twenty years after the Agile Manifesto was first presented, the legendary Robert C. Martin (“Uncle Bob”) reintroduces Agile values and principles for a new generation–programmers and nonprogrammers alike. Martin, author of Clean Code and other highly influential software development guides, was there at Agile’s founding. Now, in Clean Agile: Back to Basics, he strips away misunderstandings and distractions that over the years have made it harder to use Agile than was originally intended.\nMartin describes what Agile is in no uncertain terms: a small discipline that helps small teams manage small projects . . . with huge implications because every big project is comprised of many small projects. Drawing on his fifty years’ experience with projects of every conceivable type, he shows how Agile can help you bring true professionalism to software development.\nGet back to the basics–what Agile is, was, and should always be\nUnderstand the origins, and proper practice, of SCRUM\nMaster essential business-facing Agile practices, from small releases and acceptance tests to whole-team communication\nExplore Agile team members’ relationships with each other, and with their product\nRediscover indispensable Agile technical practices: TDD, refactoring, simple design, and pair programming\nUnderstand the central roles values and craftsmanship play in your Agile team’s success\nIf you want Agile’s true benefits, there are no shortcuts: You need to do Agile right. Clean Agile: Back to Basics will show you how, whether you’re a developer, tester, manager, project manager, or customer.\n\nRegister your book for convenient access to downloads, updates, and/or corrections as they become available. See inside book for details."
+      },
+      {
+        "id": "5",
+        "name": "Lonely Planet Chile & Easter Island",
+        "author": {
+          "id": "2",
+          "name": "Carolyn McCarthy"
+        },
+        "cover": "https://sscdn.co/gcs/studiosol/2022/mobile/book/lonely-planet-chile-e-easter-island.jpg",
+        "description": "Lonely Planet: The world's leading travel guide publisher\n\nLonely Planet's Chile & Easter Island is your passport to the most relevant, up-to-date advice on what to see and skip, and what hidden discoveries await you. Strap on your pack and hike through winding forests to behold the granite mountain spires of Las Torres; watch sunset turn the Valle de la Luna intense purple, gold, pink and yellow; and puzzle over the giant statues of Easter Island. All with your trusted travel companion. Get to the heart of Chile & Easter Island and begin your journey now!\n\nInside Lonely Planet's Chile & Easter Island:\n\nColour maps and images throughout\nHighlights and itineraries help you tailor your trip to your personal needs and interests\nInsider tips to save time and money and get around like a local, avoiding crowds and trouble spots\nEssential info at your fingertips - hours of operation, phone numbers, websites, transit tips, prices\nHonest reviews for all budgets - eating, sleeping, sightseeing, going out, shopping, hidden gems that most guidebooks miss\nCultural insights provide a richer, more rewarding travel experience - covering history, people, music, landscapes, wildlife, cuisine, politics\nOver 97 maps for easy navigation\nCovers Santiago, Middle Chile, Southern Heartland, Archipielago Juan Fernandez, Norte Grande, Norte Chico, Sur Chico, Chiloé, Northern Patagonia, Southern Patagonia, Tierra del Fuego, Easter Island\nThe Perfect Choice: Lonely Planet's Chile & Easter Island is our most comprehensive guide to Chile and Easter Island, and is designed to immerse you in the culture and help you discover the best sights and get off the beaten track.\n\nAbout Lonely Planet: Lonely Planet is a leading travel media company and the world's number one travel guidebook brand, providing both inspiring and trustworthy information for every kind of traveller since 1973. Over the past four decades, we've printed over 145 million guidebooks and grown a dedicated, passionate global community of travellers. You'll also find our content online, and in mobile apps, video, 14 languages, nine international magazines, armchair and lifestyle books, ebooks, and more.\n\n'Lonely Planet guides are, quite simply, like no other.' - New York Times\n\n'Lonely Planet. It's on everyone's bookshelves, it's in every traveller's hands. It's on mobile phones. It's on the Internet. It's everywhere, and it's telling entire generations of people how to travel the world.' - Fairfax Media (Australia)"
+      },
+      {
+        "id": "6",
+        "name": "Lonely Planet Argentina",
+        "author": {
+          "id": "2",
+          "name": "Carolyn McCarthy"
+        },
+        "cover": "https://sscdn.co/gcs/studiosol/2022/mobile/book/lonely-planet-argentina.jpg",
+        "description": "Lonely Planet: The world's leading travel guide publisher\n\nLonely Planet's Argentina is your passport to the most relevant, up-to-date advice on what to see and skip, and what hidden discoveries await you. Watch enormous icebergs calve from Glaciar Perito Moreno, tour wineries and enjoy the finished product around Mendoza, and hike the rugged Fitz Roy Range for stunning mountain views - all with your trusted travel companion. Get to the heart of Argentina and begin your journey now!\n\nInside Lonely Planet's Argentina:\n\nColor maps and images throughout\nHighlights and itineraries help you tailor your trip to your personal needs and interests\nInsider tips to save time and money and get around like a local, avoiding crowds and trouble spots\nEssential info at your fingertips - hours of operation, phone numbers, websites, transit tips, prices\nHonest reviews for all budgets - eating, sleeping, sightseeing, going out, shopping, hidden gems that most guidebooks miss\nCultural insights provide a richer, more rewarding travel experience - covering history, people, music, landscapes, wildlife, cuisine, politics\nOver 84 maps for easy navigation\nCovers Buenos Aires, The Pampas & the Atlantic Coast, Iguazu Falls & the Northeast, Salta & the Andean Northwest, Córdoba & the Central Sierras, Mendoza & the Central Andes, Bariloche & the Lake District, Patagonia, Falkland Islands/Islas Malvinas, Tierra del Fuego, Uruguay, and more\nThe Perfect Choice: Lonely Planet's Argentina is our most comprehensive guide to the country, and is designed to immerse you in the culture and help you discover the best sights and get off the beaten track.\n\nLooking for more extensive city coverage? Check out Lonely Planet's Buenos Aires for a comprehensive look at all the capital has to offer.\n\n"
+      },
+      {
+        "id": "7",
+        "name": "Lonely Planet Southwest USA",
+        "author": {
+          "id": "2",
+          "name": "Carolyn McCarthy"
+        },
+        "cover": "https://sscdn.co/gcs/studiosol/2022/mobile/book/lonely-planet-southwest-usa.jpg",
+        "description": "Lonely Planet: The world's leading travel guide publisher\n\nLonely Planet Southwest USAis your passport to the most relevant, up-to-date advice on what to see and skip, and what hidden discoveries await you. Nourish your soul as you soak up the sheer immensity of the Grand Canyon, chase the neon lights in Las Vegas, or be lured by the ski slopes, hiking trails and white-water rapids of Taos -all with your trusted travel companion. Get to the heart of Southwest USA and begin your journey now!\n\nInside Lonely Planet's Southwest USA Travel Guide:\n\nColour maps and images throughout\nHighlights and itineraries help you tailor your trip to your personal needs and interests\nInsider tips to save time and money and get around like a local, avoiding crowds and trouble spots\nEssential info at your fingertips - hours of operation, phone numbers, websites, transit tips, prices\nHonest reviews for all budgets - eating, sleeping, sight-seeing, going out, shopping, hidden gems that most guidebooks miss\nCultural insights give you a richer, more rewarding travel experience - history, politics, lifestyle, Native Americans, culture, art, literature, cinema, music, architecture, landscapes, wildlife, environmental issues, cuisine, beer, wine, customs, etiquette\nCovers Las Vegas, Nevada, Arizona, Greater Phoenix, Grand Canyon Region, Navajo Reservation, Taos, Las Vegas, New Mexico, Albuquerque, Santa Fe, Southwestern Colorado, Utah and more\nThe Perfect Choice: Lonely Planet Southwest USA , our most comprehensive guide to Southwest USA, is perfect for both exploring top sights and taking roads less traveled.\n\nLooking for a guide focused on Las Vegas? Check out Lonely Planet's California guide for a comprehensive look at all the city has to offer; Discover Las Vegas, a photo-rich guide to the city's most popular attractions; or Pocket Las Vegas, a handy-sized guide focused on the can't-miss sights for a quick trip.\n\nAbout Lonely Planet: Since 1973, Lonely Planet has become the world's leading travel media company with guidebooks to every destination, an award-winning website, mobile and digital travel products, and a dedicated traveler community. Lonely Planet covers must-see spots but also enables curious travelers to get off beaten paths to understand more of the culture of the places in which they find themselves.\n\n"
+      },
+      {
+        "id": "8",
+        "name": "Lonely Planet Colorado",
+        "author": {
+          "id": "2",
+          "name": "Carolyn McCarthy"
+        },
+        "cover": "https://sscdn.co/gcs/studiosol/2022/mobile/book/lonely-planet-colorado.jpg",
+        "description": "Lonely Planet: The world’s leading travel guide publisher\n\nLonely Planet Colorado is your passport to the most relevant, up-to-date advice on what to see and skip, and what hidden discoveries await you. Hit the slopes in Aspen, discover the Old West in Durango or marvel at the splendor of the Rockies, all with your trusted travel companion. Get to the heart of Colorado and begin your journey now!\n\nInside Lonely Planet Colorado:\n\nColor maps and images throughout\nHighlightsand itineraries help you tailor your trip to your personal needs and interests\nInsider tips to save time and money and get around like a local, avoiding crowds and trouble spots\nEssential infoat your fingertips - hours of operation, phone numbers, websites, transit tips, prices\nHonest reviews for all budgets - eating, sleeping, sight-seeing, going out, shopping, hidden gems that most guidebooks miss\nCultural insights give you a richer, more rewarding travel experience – sports, the arts, literature, festivals, wine, hiking, the old west, snow sports, distilleries, wildlife, politics, ranching, mining, marijuana, Native American history and culture\nCovers Denver, Boulder, Rocky Mountain National Park, North Colorado, Vail, Aspen, Central Colorado, San Luis Valley, Southeast Colorado and more\nThe Perfect Choice: Lonely Planet Colorado, our most comprehensive guide to Colorado, is perfect for both exploring top sights and taking roads less traveled\n\nAbout Lonely Planet: Lonely Planet is a leading travel media company and the world’s number one travel guidebook brand, providing both inspiring and trustworthy information for every kind of traveller since 1973. Over the past four decades, we’ve printed over 145 million guidebooks and grown a dedicated, passionate global community of travellers. You’ll also find our content online, on mobile, video and in 14 languages, 12 international magazines, armchair and lifestyle books, ebooks, and more."
+      },
+      {
+        "id": "9",
+        "name": "Lonely Planet Peru",
+        "author": {
+          "id": "2",
+          "name": "Carolyn McCarthy"
+        },
+        "cover": "https://sscdn.co/gcs/studiosol/2022/mobile/book/lonely-planet-peru.jpg",
+        "description": "#1 best-selling guide to Peru*\n\nLonely Planet Peru is your passport to the most relevant, up-to-date advice on what to see and skip, and what hidden discoveries await you. Trek the ancient Inca trail, puzzle over the mystery of the Nasca lines, wander the stone temples of Machu Picchu or indulge in local delicacies in Lima; all with your trusted travel companion. Get to the heart of Peru and begin your journey now!\n\nInside Lonely Planet Peru:\n\nColor maps and images throughout\nHighlightsand itineraries help you tailor your trip to your personal needs and interests\nInsider tips to save time and money and get around like a local, avoiding crowds and trouble spots\nEssential infoat your fingertips - hours of operation, phone numbers, websites, transit tips, prices\nHonest reviews for all budgets - eating, sleeping, sight-seeing, going out, shopping, hidden gems that most guidebooks miss\nCultural insights give you a richer, more rewarding travel experience - history, cuisine, music, the arts, nature\nOver70 color maps\nCovers Lima, Amazon Basin, Huaras, Cordilleras, Central Highlands, Chan Chan, Cuzco & the Sacred Valley, Lake Titicaca, Arequipa, Canyon Country and more\nThe Perfect Choice: Lonely Planet Peru, our most comprehensive guide to Peru, is perfect for both exploring top sights and taking roads less traveled.\n\nLooking for just the highlights? Check out Discover Peru, a photo-rich guide to the country's most popular attractions.\nAuthors: Written and researched by Lonely Planet.\n\nAbout Lonely Planet: Since 1973, Lonely Planet has become the world's leading travel media company with guidebooks to every destination, an award-winning website, mobile and digital travel products, and a dedicated traveler community. Lonely Planet covers must-see spots but also enables curious travelers to get off beaten paths to understand more of the culture of the places in which they find themselves."
+      },
+      {
+        "id": "10",
+        "name": "It: A Novel",
+        "author": {
+          "id": "3",
+          "name": "Stephen King"
+        },
+        "cover": "https://sscdn.co/gcs/studiosol/2022/mobile/book/it-a-novel.jpg",
+        "description": "It: Chapter Two—now a major motion picture!\n\nStephen King’s terrifying, classic #1 New York Times bestseller, “a landmark in American literature” (Chicago Sun-Times)—about seven adults who return to their hometown to confront a nightmare they had first stumbled on as teenagers…an evil without a name: It.\n\nWelcome to Derry, Maine. It’s a small city, a place as hauntingly familiar as your own hometown. Only in Derry the haunting is real.\n\nThey were seven teenagers when they first stumbled upon the horror. Now they are grown-up men and women who have gone out into the big world to gain success and happiness. But the promise they made twenty-eight years ago calls them reunite in the same place where, as teenagers, they battled an evil creature that preyed on the city’s children. Now, children are being murdered again and their repressed memories of that terrifying summer return as they prepare to once again battle the monster lurking in Derry’s sewers.\n\nReaders of Stephen King know that Derry, Maine, is a place with a deep, dark hold on the author. It reappears in many of his books, including Bag of Bones, Hearts in Atlantis, and 11/22/63. But it all starts with It.\n\n“Stephen King’s most mature work” (St. Petersburg Times), “It will overwhelm you…to be read in a well-lit room only” (Los Angeles Times)."
+      },
+      {
+        "id": "11",
+        "name": "The Hobbit",
+        "author": {
+          "id": "4",
+          "name": "J. R. R. Tolkien"
+        },
+        "cover": "https://sscdn.co/gcs/studiosol/2022/mobile/book/the-hobbit.jpg",
+        "description": "ilbo Baggins is a hobbit who enjoys a comfortable, unambitious life, rarely travelling further than the pantry of his hobbit-hole in Bag End. But his contentment is disturbed when the wizard, Gandalf, and a company of thirteen dwarves arrive on his doorstep one day, to whisk him away on a journey ‘there and back again’. They have a plot to raid the treasure hoard of Smaug the Magnificent, a large and very dangerous dragon…\n\nThe prelude to THE LORD OF THE RINGS, THE HOBBIT has sold many millions of copies since its publication in 1937, establishing itself as one of the most beloved and influential books of the twentieth century."
+      },
+      {
+        "id": "12",
+        "name": "The Lord of the Rings",
+        "author": {
+          "id": "4",
+          "name": "J. R. R. Tolkien"
+        },
+        "cover": "https://sscdn.co/gcs/studiosol/2022/mobile/book/the-lord-of-the-rings.jpg",
+        "description": "All three parts of the epic masterpiece The Lord of the Rings – The Fellowship of the Ring, The Two Towers & The Return of the King – available as one download, featuring the definitive edition of the text, hyperlinked footnotes and page references, and 3 maps including a detailed map of Middle-earth.\n\nSauron, the Dark Lord, has gathered to him all the Rings of Power – the means by which he intends to rule Middle-earth. All he lacks in his plans for dominion is the One Ring – the ring that rules them all – which has fallen into the hands of the hobbit, Bilbo Baggins.\n\nIn a sleepy village in the Shire, young Frodo Baggins finds himself faced with an immense task, as the Ring is entrusted to his care. He must leave his home and make a perilous journey across the realms of Middle-earth to the Crack of Doom, deep inside the territories of the Dark Lord. There he must destroy the Ring forever and foil the Dark Lord in his evil purpose.\n\nSince it was first published in 1954, ‘The Lord of the Rings’ has been a book people have treasured. Steeped in unrivalled magic and otherworldliness, its sweeping fantasy has touched the hearts of young and old alike."
+      },
+      {
+        "id": "13",
+        "name": "Beowulf: A Translation and Commentary, together with Sellic Spell",
+        "author": {
+          "id": "4",
+          "name": "J. R. R. Tolkien"
+        },
+        "cover": "https://sscdn.co/gcs/studiosol/2022/mobile/book/beowulf.jpg",
+        "description": "The translation of Beowulf by J.R.R. Tolkien was an early work completed in 1926: he returned to it later to make hasty corrections, but seems never to have considered its publication.\n\nSuitable for tablets. Some special characters may not display correctly on older devices.\n\nWe recommend that you download a sample and check the ‘Note to the Reader’ page before purchase.\n\nThis edition is twofold, for there exists an illuminating commentary on the text of the poem by the translator himself, in the written form of a series of lectures given at Oxford in the 1930s; and from these lectures a substantial selection has been made, to form also a commentary on the translation in this book.\n\nFrom his creative attention to detail in these lectures there arises a sense of the immediacy and clarity of his vision. It is as if he entered into the imagined past: standing beside Beowulf and his men shaking out their mail-shirts as they beached their ship on the coast of Denmark, listening to the rising anger of Beowulf at the taunting of Unferth, or looking up in amazement at Grendel’s terrible hand set under the roof of Heorot.\n\nBut the commentary in this book includes also much from those lectures in which, while always anchored in the text, he expressed his wider perceptions. He looks closely at the dragon that would slay Beowulf ‘snuffling in baffled rage and injured greed when he discovers the theft of the cup’; but he rebuts the notion that this is ‘a mere treasure story’, ‘just another dragon tale’. He turns to the lines that tell of the burying of the golden things long ago, and observes that it is ‘the feeling for the treasure itself, this sad history’ that raises it to another level. ‘The whole thing is sombre, tragic, sinister, curiously real. The “treasure” is not just some lucky wealth that will enable the finder to have a good time, or marry the princess. It is laden with history, leading back into the dark heathen ages beyond the memory of song, but not beyond the reach of imagination.’\n\nSellic Spell, a ‘marvellous tale’, is a story written by Tolkien suggesting what might have been the form and style of an Old English folk-tale of Beowulf, in which there was no association with the ‘historical legends’ of the Northern kingdoms."
+      },
+      {
+        "id": "14",
+        "name": "The Silmarillion",
+        "author": {
+          "id": "4",
+          "name": "J. R. R. Tolkien"
+        },
+        "cover": "https://sscdn.co/gcs/studiosol/2022/mobile/book/the-silmarillion.jpg",
+        "description": "The forerunner to The Lord of the Rings, The Silmarillion fills in the background which lies behind the more popular work, and gives the earlier history of Middle-earth, introducing some of the key characters.\n\nThe Silmarillion is an account of the Elder Days, of the First Age of Tolkien’s world. It is the ancient drama to which the characters in The Lord of the Rings look back, and in whose events some of them such as Elrond and Galadriel took part. The tales of The Silmarillion are set in an age when Morgoth, the first Dark Lord, dwelt in Middle-Earth, and the High Elves made war upon him for the recovery of the Silmarils, the jewels containing the pure light of Valinor.\n\nIncluded in the book are several shorter works. The Ainulindale is a myth of the Creation and in the Valaquenta the nature and powers of each of the gods is described. The Akallabeth recounts the downfall of the great island kingdom of Númenor at the end of the Second Age and Of the Rings of Power tells of the great events at the end of the Third Age, as narrated in The Lord of the Rings."
+      },
+      {
+        "id": "15",
+        "name": "O Evangelho Segundo um Humorista",
+        "author": {
+          "id": "5",
+          "name": "Afonso Padilha"
+        },
+        "cover": "https://sscdn.co/gcs/studiosol/2022/mobile/book/o-evangelho-segundo-um-humorista.jpg",
+        "description": "O evangelho segundo um humorista é um apanhado de cenas, esquetes, crônicas, textos humorísticos sem um gênero definido baseado nas premissas do velho e do novo testamento. Usando como referências as histórias mais conhecidas do imaginário popular, pensando em novas situações ou outros pontos de vista em cima das já existentes."
+      },
+      {
+        "id": "16",
+        "name": "The Rescue",
+        "author": {
+          "id": "6",
+          "name": "Nicholas Sparks"
+        },
+        "cover": "https://sscdn.co/gcs/studiosol/2022/mobile/book/the-rescue.jpg",
+        "description": "How do you learn to trust again?\n\nDenise Hilton, a young single mother, is driving through Edenton, North Carolina, when her car skids off the road during a storm.\n\nWith her is her four-year-old son, Kyle, a boy with severe learning disabilities for whom she has sacrificed everything. When volunteer fireman Taylor McAden finds her she is unconscious and bleeding, but when she wakes an even more chilling truth becomes clear: Kyle is gone.\n\nWhen confronted by raging fires or deadly accidents, Taylor feels compelled to take terrifying risks to save lives, and the search for Kyle is no exception. But there is one leap of faith Taylor cannot bring himself to make - to commit to a relationship. Will this chance meeting with Denise prove any different?\n\n"
+      },
+      {
+        "id": "17",
+        "name": "The Return",
+        "author": {
+          "id": "6",
+          "name": "Nicholas Sparks"
+        },
+        "cover": "https://sscdn.co/gcs/studiosol/2022/mobile/book/the-return.jpg",
+        "description": "A house full of love. A house full of secrets.\n\n#1 New York Times bestselling author Nicholas Sparks is back with his best novel yet.\n\n*\n\nTrevor Benson never intended to return to North Carolina.\nBut here he is, back where it all began.\n\nTrevor found himself unable to resist the call home when he inherited a tumbledown cabin from his grandfather. He's come back to live the simple life but nothing here is simple.\n\nThere's Callie, the sullen local teenager who seems to know more than she should about Trevor's grandfather's death. And there's Natalie, the deputy sheriff intent on making a point and lingering in Trevor's mind long after she's left his porch.\n\nIn a bid to unravel Natalie and Callie's secrets and to find out what really happened to his grandfather, Trevor is about to learn more than he's bargained for - that sometimes, in order to move forward, we have to return to the place where it all began.\n\nPraise for Nicholas Sparks:\n\n'A fiercely romantic and touching tale' Heat\n\n'An A-grade romantic read' OK!\n\n'Pulls at the heartstrings' Sunday Times\n\n'An absorbing page-turner' Daily Mail\n\n'This one won't leave a dry eye' Daily Mirror"
+      },
+      {
+        "id": "18",
+        "name": "Every Breath",
+        "author": {
+          "id": "6",
+          "name": "Nicholas Sparks"
+        },
+        "cover": "https://sscdn.co/gcs/studiosol/2022/mobile/book/every-breath.jpg",
+        "description": "Treat yourself to an epic #1 New York Times bestselling love story that spans decades and continents as two people at a crossroads -- one from North Carolina and one from Zimbabwe -- experience the transcendence and heartbreak of true love.\nHope Anderson has some important choices to make. At thirty-six, she's been dating her boyfriend, an orthopedic surgeon, for six years. With no wedding plans in sight, and her father recently diagnosed with ALS, she decides to use a week at her family's cottage in Sunset Beach, North Carolina, to ready the house for sale and mull over some difficult decisions about her future.\nTru Walls has never visited North Carolina but is summoned to Sunset Beach by a letter from a man claiming to be his father. A safari guide, born and raised in Zimbabwe, Tru hopes to unravel some of the mysteries surrounding his mother's early life and recapture memories lost with her death. When the two strangers cross paths, their connection is as electric as it is unfathomable . . . but in the immersive days that follow, their feelings for each other will give way to choices that pit family duty against personal happiness in devastating ways.\nIlluminating heartbreaking regrets and enduring hope, Every Breath explores the many facets of love that lay claim to our deepest loyalties while asking a life-changing question: How long can a dream survive?\n"
+      }
+    ]
+  }
+}

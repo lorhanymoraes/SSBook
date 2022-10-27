@@ -20,7 +20,7 @@ struct FavoriteBook: Codable {
     let author: Author?
     let cover: String?
     let favoriteBookDescription: String?
-
+    
     enum CodingKeys: String, CodingKey {
         case id, name, author, cover
         case favoriteBookDescription = "description"
